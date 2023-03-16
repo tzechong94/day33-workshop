@@ -1,0 +1,11 @@
+<h2>Task</h2>
+
+<div class="container" *ngFor="let task of tasks; let idx = index">
+    <h3 class="task-title">{{task.description}}</h3>
+    <div>
+        <p class="priority">{{task.priority}}</p>
+        <p class="date">{{task.dueDate}}</p>
+    </div>
+    <button type="button" class="btn" (click)="editTask(idx)">Edit</button>
+    <button type="button" class="btn" (click)="deleteTask(idx)">Delete</button>
+</div>
